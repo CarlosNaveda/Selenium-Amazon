@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
         features = "src/test/resources/features" ,
         glue = {"steps","hooks"},
         plugin = {"pretty"},
-        tags = ""
+        tags = "@Exercise"
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
     @Test
