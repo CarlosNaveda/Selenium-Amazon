@@ -13,7 +13,7 @@ public class DriverManager {
         return driver;
     }
 
-    public static void initDriver(WebDriver driver) {
+    public static void initDriver() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
