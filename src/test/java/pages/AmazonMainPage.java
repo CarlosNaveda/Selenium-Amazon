@@ -8,12 +8,20 @@ public class AmazonMainPage extends BasePage {
     }
 
     //Variables
-    private String searchTextBox = "";
+    private String searchTextBox = "//input[@id='twotabsearchtextbox']";
+    private String searchButton = "//input[@id='nav-search-submit-button']";
 
     //Métodos
     public void navigateToAmazon (String url){
         navigateTo(url);
     }
 
+    public void searchText(String text){
+        writeText(searchTextBox, text);
+    }
+
+    public void clickSearchButton(){
+        clickButton(searchButton);
+    }
 
 }
