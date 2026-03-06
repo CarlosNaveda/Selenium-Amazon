@@ -1,5 +1,6 @@
 package steps;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import org.testng.annotations.Test;
@@ -18,6 +19,11 @@ public class AmazonSteps {
     public void searchForAlexa() {
         amazonMainPage.searchText("Alexa");
         amazonMainPage.clickSearchButton();
+    }
+
+    @And("navigates to the second page")
+    public void navigatesToTheSecondPage() {
+        amazonMainPage.clickSecondPage();
     }
 
 }
