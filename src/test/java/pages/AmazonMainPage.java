@@ -11,6 +11,7 @@ public class AmazonMainPage extends BasePage {
     private String searchTextBox = "//input[@id='twotabsearchtextbox']";
     private String searchButton = "//input[@id='nav-search-submit-button']";
     private String secondPage = "//a[@aria-label='Ir a la página 2']";
+    private String thirdItem ="(//div[@data-component-type='s-search-result'])[3]//a//h2";
 
     //Métodos
     public void navigateToAmazon (String url){
@@ -27,6 +28,11 @@ public class AmazonMainPage extends BasePage {
 
     public void clickSecondPage(){
         clickButton(secondPage);
+    }
+
+    public void clickThirdItem(){
+        clickButton(thirdItem);
+
     }
 
 }

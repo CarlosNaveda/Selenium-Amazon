@@ -26,4 +26,9 @@ public class AmazonSteps {
         amazonMainPage.clickSecondPage();
     }
 
+    @And("selects the third item")
+    public void selectsTheThirdItem() {
+        amazonMainPage.clickThirdItem();
+    }
+
 }
