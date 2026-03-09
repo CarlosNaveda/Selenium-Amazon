@@ -18,9 +18,9 @@ public class AmazonSteps {
         amazonMainPage.navigateTo("https://www.amazon.com");
     }
 
-    @When("search for Alexa")
-    public void searchForAlexa() {
-        amazonMainPage.searchText("Alexa");
+    @When("search for {string}")
+    public void searchForProduct(String productName) {
+        amazonMainPage.searchText(productName);
         amazonMainPage.clickSearchButton();
     }
 
@@ -29,9 +29,9 @@ public class AmazonSteps {
         amazonMainPage.clickSecondPage();
     }
 
-    @And("selects the second item")
-    public void selectsTheSecondItem() {
-        amazonMainPage.clickSecondItem();
+    @And("selects the {word} item")
+    public void selectsTheItem(String number) {
+        amazonMainPage.clickItem(number);
     }
 
     @And("the user can add it to the cart")
