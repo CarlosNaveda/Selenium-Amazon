@@ -11,7 +11,10 @@ public class AmazonMainPage extends BasePage {
     private String searchTextBox = "//input[@id='twotabsearchtextbox']";
     private String searchButton = "//input[@id='nav-search-submit-button']";
     private String secondPage = "//a[@aria-label='Ir a la página 2']";
-    private String thirdItem ="(//div[@data-component-type='s-search-result'])[3]//a//h2";
+    private String secondItem ="(//div[@data-component-type='s-search-result'])[2]//a//h2";
+    private String addToCartButton = "//input[@id='add-to-cart-button']";
+    private String successMessage= "//h1[contains(normalize-space(),'Agregado al carrito')]";
+
 
     //Métodos
     public void navigateToAmazon (String url){
@@ -30,9 +33,18 @@ public class AmazonMainPage extends BasePage {
         clickButton(secondPage);
     }
 
-    public void clickThirdItem(){
-        clickButton(thirdItem);
+    public void clickSecondItem(){
+        clickButton(secondItem);
 
     }
+    public void clickAddToCartButton(){
+        clickButton(addToCartButton);
+    }
+
+    public String getSuccessMessage(){
+        return getTextWebElement(successMessage);
+    }
+
+
 
 }
