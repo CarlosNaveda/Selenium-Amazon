@@ -12,7 +12,9 @@ public class AmazonMainPage extends BasePage {
     private String searchButton = "//input[@id='nav-search-submit-button']";
     private String secondPage = "//a[@aria-label='Ir a la página 2']";
     private String item ="(//div[@data-component-type='s-search-result'])[%s]//a//h2";
-    private String addToCartButton = "//input[@id='add-to-cart-button']";
+    private String addToCartButton = "//input[contains(@id,'add-to-cart-button')]";
+
+    //tagname[contains(@attribute, 'partial value')]
     private String successMessage= "//h1[contains(normalize-space(),'Agregado al carrito')]";
 
 
