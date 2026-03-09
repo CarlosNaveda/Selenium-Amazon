@@ -11,9 +11,9 @@ public class Hooks {
         DriverManager.initDriver();
     }
 
-//    @After
-//    public void afterHooks() {
-//        DriverManager.quitDriver();
-//    }
+    @After
+    public void afterHooks() {
+        DriverManager.quitDriver();
+    }
 
 }
